@@ -10,7 +10,7 @@ const Logout = () => {
         onClick={() => logout()}
         disabled={isAuthenticating}
       >
-        Logout From METAVARSE
+        Logout From METAVERSE
       </button>
     </div>
   );
