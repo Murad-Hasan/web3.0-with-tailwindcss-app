@@ -6,7 +6,7 @@ export const Avatar = ({ username, logoutOnPress }) => {
   return (
     <Image
       className="rounded-full bg-black cursor-pointer"
-      src={`https://avatars.dicebear.com/api/pixel-art/${
+      src={`https://avatars.dicebear.com/api/personas/${
         username || user.get("username")
       }.svg`}
       layout="fill"
