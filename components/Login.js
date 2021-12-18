@@ -5,8 +5,8 @@ import { useMoralis } from "react-moralis";
 const Login = () => {
   const { authenticate } = useMoralis();
   return (
-    <div className="relative text-white">
-      <div className="flex flex-col absolute z-50 h-4/6 w-full items-center justify-center space-y-2">
+    <div className="relative text-white w-screen h-screen">
+      <div className="flex flex-col absolute z-50 h-full w-full items-center justify-center space-y-2 backdrop-blur-sm">
         {/* LOGO for Metaverse */}
         <Image
           src="/unnamed.gif"
@@ -22,8 +22,12 @@ const Login = () => {
           Login With METAVERSE
         </button>
       </div>
-      <div className="w-full h-screen">
-        <Image src="/bg.jpg" layout="fill" objectFit="cover" />
+      <div className="">
+        <Image
+          src="/bg.jpg"
+          layout="fill"
+          className="object-cover lg:object-fill"
+        />
       </div>
     </div>
   );

@@ -23,7 +23,7 @@ const Header = () => {
 
           <div className="lg:text-center text-left">
             <h1 className="lg:text-3xl text-2xl font-bold  mt-2">
-              Welcome to Your Own Metaverse World
+              Welcome To Murad Metaverse world
             </h1>
             <h2 className="lg:text-4xl text-xl font-bold truncate">
               {user.get("username")}
