@@ -17,9 +17,9 @@ const Login = () => {
         {/* Button For Login */}
         <button
           onClick={authenticate}
-          className="bg-rose-500 py-4 px-4 rounded-lg hover:scale-105 transition duration-700 ease-in-out"
+          className="backdrop-blur-3xl border-2 border-gray-300 py-4 px-4 rounded-lg hover:scale-105 hover:bg-slate-700 transition duration-700 ease-in-out"
         >
-          Login With METAVERSE
+          Login for Metaverse Chat
         </button>
       </div>
       <div className="">
