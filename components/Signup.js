@@ -43,6 +43,7 @@ function Signup() {
           >
             Sign up
           </button>
+          <p>Already Have a account ?</p>
           <button
             className=" bg-red-800 py-2 px-5 rounded-md hover:scale-105 transition duration-200"
             onClick={() => setShowUp(false)}
