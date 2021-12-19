@@ -1,14 +1,29 @@
 import { useMoralis } from "react-moralis";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 
 const ChangeUserName = () => {
   const { setUserData, isUserUpdating, userError, user } = useMoralis();
-
+  const MySwal = withReactContent(Swal);
   const setUsername = () => {
-    const username = prompt(
-      `Enter your new Username (Current: ${user.get("username")})`
-    );
-    if (!username) return;
-    setUserData({ username });
+    MySwal.fire({
+      title: "Enter your new username",
+      input: "text",
+      inputAttributes: {
+        autocapitalize: "off",
+      },
+      showCancelButton: true,
+      confirmButtonText: "Confirm",
+      showLoaderOnConfirm: true,
+      preConfirm: (username) => {
+        if (username === "") {
+          return MySwal.fire("Please enter a username");
+        }
+        return setUserData({
+          username,
+        });
+      },
+    });
   };
 
   return (
