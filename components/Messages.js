@@ -42,7 +42,7 @@ const Messages = () => {
       </div>
       <div ref={endOfMessagesRef}>
         <p className="text-gray-400 mt-5 text-center font-bold text-lg">
-          You're up to date {user.get("username")}! &#8499;
+          You're up to date {user?.get("username")}! &#8499;
         </p>
       </div>
     </div>

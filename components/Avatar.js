@@ -9,7 +9,7 @@ export const Avatar = ({ username, logoutOnPress }) => {
       <Image
         className="rounded-full bg-black cursor-pointer"
         src={`https://avatars.dicebear.com/api/personas/${
-          username || user.get("username")
+          username || user?.get("username")
         }.svg`}
         layout="fill"
         data-tip="Click to Logout"

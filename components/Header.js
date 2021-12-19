@@ -26,7 +26,7 @@ const Header = () => {
               Welcome To Murad Metaverse world
             </h1>
             <h2 className="lg:text-4xl text-xl font-bold truncate">
-              {user.get("username")}
+              {user?.getUsername()}
             </h2>
           </div>
           <ChangeUserName />

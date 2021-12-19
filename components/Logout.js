@@ -6,7 +6,7 @@ const Logout = () => {
   return (
     <div className="backdrop-sepia-0 bg-white/50 shadow-lg p-6 rounded-xl">
       <h1 className="text-xl text-center font-bold text-black mb-2">
-        Welcome Dude, <br /> Your Wallet Address is: {user.get("ethAddress")}
+        Welcome Dude, <br /> Your Wallet Address is: {user?.get("ethAddress")}
       </h1>
       <div className="relative">
         <button

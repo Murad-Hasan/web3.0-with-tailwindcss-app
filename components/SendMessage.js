@@ -13,8 +13,8 @@ function SendMessage({ endOfMessagesRef }) {
     messages
       .save({
         message: message,
-        username: user.get("username"),
-        ethAddress: user.get("ethAddress"),
+        username: user?.get("username"),
+        ethAddress: user?.get("ethAddress"),
       })
       .then((message) => {
         console.log("Message sent successfully", message);
@@ -33,7 +33,7 @@ function SendMessage({ endOfMessagesRef }) {
         type="text"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
-        placeholder={`Enter a Message ${user.getUsername()}...`}
+        placeholder={`Enter a Message ${user?.getUsername()}...`}
       />
       <button
         onClick={sendMessage}
