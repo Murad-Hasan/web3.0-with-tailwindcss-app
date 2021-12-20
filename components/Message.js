@@ -5,9 +5,7 @@ import { Avatar } from "./Avatar";
 function Message({ message }) {
   const { user } = useMoralis();
 
-  const isUserMessage =
-    message.get("ethAddress || username") ===
-    user?.get("ethAddress || username");
+  const isUserMessage = message.get("ethAddress") === user?.get("ethAddress");
 
   return (
     <div
